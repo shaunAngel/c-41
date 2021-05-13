@@ -34,8 +34,9 @@ this.reset.position(displayWidth-100, 20);
       this.greeting.position(displayWidth/2 - 70, displayHeight/4);
     });
     this.reset.mousePressed(()=>{
-      player.updateCount(0)
+      player.updateCount(0);
       game.update(0);
+      Player.updateCarsAtEnd(0);
 var playerInforef = database.ref('players');
 playerInforef.remove();
     })
